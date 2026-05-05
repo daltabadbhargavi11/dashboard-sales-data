@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="dashboard">
+    <header class="dashboard-header">
+      <div>
+        <p class="eyebrow">Sales Overview</p>
+        <h1>Dashboard</h1>
+      </div>
+      <div class="period-chip">Q2 Sample Data</div>
+    </header>
+
+    <section class="metrics" aria-label="Key sales metrics">
+      <article class="metric-card">
+        <span class="metric-label">Total Sales</span>
+        <strong id="totalSales">$0</strong>
+        <small>Across all channels</small>
+      </article>
+      <article class="metric-card">
+        <span class="metric-label">Profit</span>
+        <strong id="totalProfit">$0</strong>
+        <small>Net sample margin</small>
+      </article>
+      <article class="metric-card">
+        <span class="metric-label">Products</span>
+        <strong id="totalProducts">0</strong>
+        <small>Active products sold</small>
+      </article>
+    </section>
+
+    <section class="charts">
+      <article class="chart-panel">
+        <div class="panel-heading">
+          <h2>Monthly Sales</h2>
+          <span>USD</span>
+        </div>
+        <canvas id="barChart" width="720" height="380" aria-label="Bar chart showing monthly sales"></canvas>
+      </article>
+
+      <article class="chart-panel">
+        <div class="panel-heading">
+          <h2>Sales by Category</h2>
+          <span>Share</span>
+        </div>
+        <canvas id="pieChart" width="460" height="380" aria-label="Pie chart showing sales by product category"></canvas>
+        <div id="pieLegend" class="legend"></div>
+      </article>
+    </section>
+
+    <section class="table-section">
+      <div class="panel-heading">
+        <h2>Top Products</h2>
+        <span>Sample</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Category</th>
+              <th>Sales</th>
+              <th>Profit</th>
+            </tr>
+          </thead>
+          <tbody id="productsTable"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
